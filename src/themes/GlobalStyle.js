@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   
@@ -40,11 +40,22 @@ const GlobalStyle = createGlobalStyle`
       font-family:var(--main-font-family);
   }
 
-  h1{
-      color:var(--active-card-color);
+  body{
+      background-color:var(--background);
+      transition:.4s all;
   }
 
   
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 800px) {
+    max-width: 85%;
+  }
 `;
 
 export default GlobalStyle;

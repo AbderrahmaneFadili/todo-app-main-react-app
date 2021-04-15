@@ -39,7 +39,7 @@ const darkTheme = {
   todoCompeletedColor: "hsl(234, 39%, 85%)",
   cardTextColor: "hsl(234, 11%, 52%)",
   activeCardTextColor: "hsl(220, 98%, 61%)",
-  cardShadow: "hsl(235, 24%, 19%)",
+  cardShadow: "hsl(237, 14%, 26%)",
   onHoverTextColor: "hsl(0, 0%, 98%)",
   titleColor: "#fff",
   /* Typography */
