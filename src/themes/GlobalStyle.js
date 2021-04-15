@@ -30,8 +30,7 @@ const GlobalStyle = createGlobalStyle`
  /* Typography */
  --main-font-size:${({ theme }) => theme.fontSize};
  --main-font-family:${({ theme }) => theme.fontFamily};
- --linear-gradient-form:${({ theme }) => theme.checkBackgroundGradientFrom}
- --linear-gradient-to:${({ theme }) => theme.checkBackgroundGradientTo}
+
   }
 
 
@@ -54,7 +53,7 @@ export const Container = styled.div`
   margin: 0 auto;
 
   @media screen and (max-width: 800px) {
-    max-width: 85%;
+    max-width: 80%;
   }
 `;
 
