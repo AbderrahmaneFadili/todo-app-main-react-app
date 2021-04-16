@@ -17,7 +17,7 @@ export const ToggleCompletedWrapper = styled.div`
   }
 
   &:hover .circle-two {
-    opacity: 1 !important;
+    opacity: 1;
   }
 `;
 

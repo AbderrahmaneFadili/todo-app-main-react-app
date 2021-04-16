@@ -31,15 +31,15 @@ const darkTheme = {
   /* Colors */
   bgImageMobile: `url(${mobileDarkBgImage})`,
   bgImageDesktop: `url(${desktopDarkBgImage})`,
-  background: "hsl(235, 24%, 19%)",
-  elementsBackground: "hsl(237, 14%, 26%)",
+  background: "hsl(235, 21%, 11%)",
+  elementsBackground: "hsl(235, 24%, 19%)",
   inputTextColor: "hsl(0, 0%, 98%)",
   inputPlaceholderColor: "hsl(234, 11%, 52%)",
   todoTextColor: "hsl(0, 0%, 98%)",
   todoCompeletedColor: "hsl(234, 39%, 85%)",
   cardTextColor: "hsl(234, 11%, 52%)",
   activeCardTextColor: "hsl(220, 98%, 61%)",
-  cardShadow: "hsl(237, 14%, 26%)",
+  cardShadow: "hsl(235, 24%, 19%)",
   onHoverTextColor: "hsl(0, 0%, 98%)",
   titleColor: "#fff",
   /* Typography */

@@ -11,6 +11,7 @@ import {
 } from "./Header.styles";
 
 import TodoInput from "../../todos/TodoInput/TodoInput";
+import TodosList from "../../todos/TodosList/TodosList";
 
 const Header = () => {
   //get the theme from redux store using useSelector Hook
@@ -42,6 +43,7 @@ const Header = () => {
           </ToggleContainer>
         </HedaerContainer>
         <TodoInput />
+        <TodosList />
       </Container>
     </HeaderWrapper>
   );

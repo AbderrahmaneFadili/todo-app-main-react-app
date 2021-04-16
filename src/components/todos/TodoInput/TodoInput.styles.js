@@ -5,7 +5,7 @@ export const TodoInputContainer = styled.div`
   background: var(--element-bg);
   display: flex;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.5rem;
 `;
 
