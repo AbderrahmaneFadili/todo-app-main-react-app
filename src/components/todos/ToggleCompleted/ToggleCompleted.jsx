@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   CheckIcon,
   CircleOne,
@@ -8,28 +8,18 @@ import {
 } from "./ToggleCompleted.styles";
 
 const ToggleCompleted = () => {
-  const [checked, setChecked] = useState(false);
-
   const handleCheckBoxValueChange = (e) => {
     console.log(e.target.checked);
-    setChecked(!checked);
   };
   return (
     <ToggleCompletedWrapper>
-      <CircleOne
-        style={{
-          opacity: checked ? 1 : 0,
-        }}
-        className="circle-one"
-      >
-        <CheckIcon src={require("../../../images/icon-check.svg").default} />
-      </CircleOne>
-      <CircleTwo className="circle-two" />
-      <ToggleInput
-        className="toggle-input"
-        onChange={handleCheckBoxValueChange}
-        type="checkbox"
+      <ToggleInput type="checkbox" onChange={handleCheckBoxValueChange} />
+      <CheckIcon
+        className="check"
+        src={require("../../../images/icon-check.svg").default}
       />
+      <CircleOne className="circle-one" />
+      <CircleTwo className="circle-two" />
     </ToggleCompletedWrapper>
   );
 };
