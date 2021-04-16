@@ -20,6 +20,10 @@ export const TodoText = styled.span`
   color: var(--todo-text-color);
   font-size: 0.9rem;
   cursor: pointer;
+
+  @media screen and (max-width: 340px) {
+    font-size: 0.7rem;
+  }
 `;
 
 export const RemoveIcon = styled.img`

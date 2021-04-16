@@ -5,10 +5,10 @@ export const FilterTodos = styled.div`
   justify-content: space-between;
   cursor: pointer;
   font-weight: bold;
-  display: none;
+  color: var(--card-text-color);
 
-  @media screen and (min-width: 768px) {
-    display: block;
+  @media screen and (max-width: 340px) {
+    font-size: 0.8rem;
   }
 `;
 

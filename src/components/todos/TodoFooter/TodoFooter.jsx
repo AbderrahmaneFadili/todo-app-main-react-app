@@ -4,13 +4,17 @@ import {
   ClearCompleted,
   ItemsCount,
   TodoFooterWrapper,
+  FilterContainer,
 } from "./TodoFooter.styles";
 
 const TodoFooter = () => {
   return (
     <TodoFooterWrapper>
       <ItemsCount>5 items left</ItemsCount>
-      <Filter />
+      <FilterContainer>
+        <Filter />
+      </FilterContainer>
+
       <ClearCompleted>Clear Completed</ClearCompleted>
     </TodoFooterWrapper>
   );

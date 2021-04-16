@@ -22,4 +22,8 @@ export const TextInput = styled.input`
   &::placeholder {
     color: var(--input-placeholder);
   }
+
+  @media screen and (max-width: 340px) {
+    font-size: 0.7rem;
+  }
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
-  height: 57vh;
+  height: 270px;
   background: var(--bg-image-mobile) no-repeat center/cover;
   padding: 3rem 0 0;
 
@@ -21,6 +21,10 @@ export const HeaderTitle = styled.h1`
   color: var(--title-color);
   letter-spacing: 10px;
   text-transform: uppercase;
+
+  @media screen and (max-width: 340px) {
+    font-size: 2rem;
+  }
 `;
 
 export const ToggleContainer = styled.div``;

@@ -6,9 +6,21 @@ export const TodoFooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   color: var(--card-text-color);
+
+  @media screen and (max-width: 340px) {
+    font-size: 0.7rem;
+  }
 `;
 
 export const ItemsCount = styled.span``;
+
+export const FilterContainer = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+`;
 
 export const ClearCompleted = styled.span`
   cursor: pointer;
