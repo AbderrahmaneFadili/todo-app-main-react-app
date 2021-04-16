@@ -19,6 +19,8 @@ const lightTheme = {
   cardShadow: "hsl(236, 9%, 61%)",
   onHoverTextColor: "hsl(235, 21%, 11%)",
   titleColor: "#fff",
+  borderColor: "hsl(233, 11%, 84%)",
+
   /* Typography */
   fontSize: "18px",
   fontFamily: "'Josefin Sans', sans-serif;",
@@ -42,6 +44,7 @@ const darkTheme = {
   cardShadow: "hsl(235, 24%, 19%)",
   onHoverTextColor: "hsl(0, 0%, 98%)",
   titleColor: "#fff",
+  borderColor: "hsl(235, 19%, 35%)",
   /* Typography */
   fontSize: "18px",
   fontFamily: "'Josefin Sans', sans-serif;",

@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
   --card-shadow:${({ theme }) => theme.cardShadow} ;
   --on-hover-color: ${({ theme }) => theme.onHoverTextColor};
   --title-color:${({ theme }) => theme.titleColor};
+  --border-color:${({ theme }) => theme.borderColor};
  /* Typography */
  --main-font-size:${({ theme }) => theme.fontSize};
  --main-font-family:${({ theme }) => theme.fontFamily};
