@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
-  height: 48vh;
+  height: 57vh;
   background: var(--bg-image-mobile) no-repeat center/cover;
   padding: 3rem 0 0;
 

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ToggleCompletedWrapper = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   background: transparent;
   border-radius: 100%;
   position: relative;
@@ -39,8 +39,8 @@ export const CircleOne = styled.div`
 `;
 
 export const CircleTwo = styled.div`
-  width: 96%;
-  height: 96%;
+  width: 95%;
+  height: 90%;
   background: var(--element-bg);
   position: absolute;
   left: 50%;

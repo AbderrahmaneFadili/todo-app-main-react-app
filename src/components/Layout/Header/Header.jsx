@@ -9,6 +9,9 @@ import {
   ToggleContainer,
   ToggleIcon,
 } from "./Header.styles";
+
+import TodoInput from "../../todos/TodoInput/TodoInput";
+
 const Header = () => {
   //get the theme from redux store using useSelector Hook
   const theme = useSelector(({ themeReducer }) => {
@@ -38,6 +41,7 @@ const Header = () => {
             )}
           </ToggleContainer>
         </HedaerContainer>
+        <TodoInput />
       </Container>
     </HeaderWrapper>
   );
