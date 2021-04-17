@@ -2,11 +2,11 @@ import React from "react";
 import { TodoItem, TodoText, RemoveIcon } from "./Todo.styles";
 import ToggleCompleted from "../ToggleCompleted/ToggleCompleted";
 
-const Todo = () => {
+const Todo = ({ id, completed, title }) => {
   return (
     <TodoItem>
       <ToggleCompleted />
-      <TodoText>Todo Exmaple</TodoText>
+      <TodoText>{title}</TodoText>
       <RemoveIcon src={require("../../../images/icon-cross.svg").default} />
     </TodoItem>
   );
