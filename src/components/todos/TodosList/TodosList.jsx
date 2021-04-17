@@ -3,11 +3,19 @@ import { TodosItems, TodosListWrapper } from "./TodosList.styles";
 import Todo from "../../todos/Todo/Todo";
 import TodoFooter from "../TodoFooter/TodoFooter";
 import FilterItems from "../FilterItems/FilterItems";
-import { compose } from "redux";
-import { connect } from "react-redux";
-import { firestoreConnect } from "react-redux-firebase";
+import { useFirestoreConnect } from "react-redux-firebase";
+import { useSelector } from "react-redux";
 
-const TodosList = ({ todos }) => {
+const TodosList = () => {
+  useFirestoreConnect(() => {
+    return [
+      {
+        collection: "todos",
+      },
+    ];
+  });
+  const todos = useSelector((state) => state.firestore.ordered.todos);
+
   return (
     <>
       <TodosListWrapper>
@@ -21,9 +29,4 @@ const TodosList = ({ todos }) => {
   );
 };
 
-export default compose(
-  firestoreConnect(() => ["todos"]),
-  connect((state) => ({
-    todos: state.firestore.ordered.todos,
-  })),
-)(TodosList);
+export default TodosList;

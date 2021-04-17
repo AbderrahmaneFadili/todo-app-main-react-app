@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { useFirestore } from "react-redux-firebase";
 
 import {
@@ -10,8 +10,6 @@ import {
 } from "./ToggleCompleted.styles";
 
 const ToggleCompleted = ({ todoId, completed }) => {
-  const checkboxRef = useRef(null);
-
   const firestore = useFirestore();
 
   const handleCheckBoxValueChange = (e) => {
@@ -24,7 +22,6 @@ const ToggleCompleted = ({ todoId, completed }) => {
     <ToggleCompletedWrapper>
       <ToggleInput
         checked={completed}
-        ref={checkboxRef}
         type="checkbox"
         onChange={handleCheckBoxValueChange}
       />

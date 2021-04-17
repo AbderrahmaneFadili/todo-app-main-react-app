@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Active, All, Completed, FilterTodos } from "./Filter.styles";
+import { connect } from "react-redux";
 
 const Filter = () => {
   const [active, setActive] = useState({

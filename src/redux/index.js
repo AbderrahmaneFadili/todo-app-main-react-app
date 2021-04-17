@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunk.withExtraArgument(getFirebase)),
+  applyMiddleware(thunk.withExtraArgument({ getFirebase })),
 );
 
 export default store;

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { TodoInputContainer, TextInput } from "./TodoInput.styles";
-import ToggleCompleted from "../ToggleCompleted/ToggleCompleted";
 import { useFirestore } from "react-redux-firebase";
 
 const TodoInput = () => {

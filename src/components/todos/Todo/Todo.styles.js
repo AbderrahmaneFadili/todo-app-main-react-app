@@ -5,6 +5,7 @@ export const TodoItem = styled.li`
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--border-color);
+  word-break: break-all;
 
   &:last-child {
     border-bottom: 0;

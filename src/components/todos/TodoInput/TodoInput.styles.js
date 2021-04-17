@@ -18,6 +18,7 @@ export const TextInput = styled.input`
   color: var(--input-text-color);
   background: transparent;
   cursor: pointer;
+  width: 100%;
 
   &::placeholder {
     color: var(--input-placeholder);
