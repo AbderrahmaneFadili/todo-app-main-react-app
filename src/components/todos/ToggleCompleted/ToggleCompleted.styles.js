@@ -28,20 +28,27 @@ export const CheckIcon = styled.img`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  opacity: ${({ checked }) => (checked ? 1 : 0)};
 `;
 
 export const CircleOne = styled.div`
   width: 100%;
   height: 100%;
-  background: var(--input-placeholder);
+  background: ${({ checked }) =>
+    checked
+      ? `linear-gradient(
+      110deg,
+      hsl(192, 100%, 67%) 21%,
+      hsl(280, 87%, 65%) 71%
+    );`
+      : "var(--input-placeholder)"};
   border-radius: 100%;
 `;
 
 export const CircleTwo = styled.div`
   width: 95%;
   height: 90%;
-  background: var(--element-bg);
+  background: ${({ checked }) => (checked ? `none` : "var(--element-bg)")};
   position: absolute;
   left: 50%;
   top: 50%;
@@ -60,20 +67,4 @@ export const ToggleInput = styled.input`
   cursor: pointer;
   z-index: 2;
   opacity: 0;
-
-  &:checked ~ .circle-one {
-    background: linear-gradient(
-      110deg,
-      hsl(192, 100%, 67%) 21%,
-      hsl(280, 87%, 65%) 71%
-    );
-  }
-
-  &:checked + .check {
-    opacity: 1;
-  }
-
-  &:checked ~ .circle-two {
-    opacity: 0;
-  }
 `;

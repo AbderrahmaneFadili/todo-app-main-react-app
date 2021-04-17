@@ -17,9 +17,11 @@ export const TodoItem = styled.li`
 
 export const TodoText = styled.span`
   margin-left: 1rem;
-  color: var(--todo-text-color);
+  color: ${({ completed }) =>
+    completed ? "var(--todo-completed-color)" : " var(--todo-text-color);"};
   font-size: 0.9rem;
   cursor: pointer;
+  text-decoration: ${({ completed }) => (completed ? "line-through" : "none")};
 
   @media screen and (max-width: 340px) {
     font-size: 0.7rem;

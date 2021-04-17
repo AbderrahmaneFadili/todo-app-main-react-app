@@ -1,12 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { TodoInputContainer, TextInput } from "./TodoInput.styles";
 import ToggleCompleted from "../ToggleCompleted/ToggleCompleted";
+import { useFirestore } from "react-redux-firebase";
 
 const TodoInput = () => {
+  const [title, setTitle] = useState("");
+
+  //get firetore
+  const firestore = useFirestore();
+
+  const handleTitleChange = (event) => {
+    setTitle(event.target.value);
+  };
+
+  const handleAddTodo = (e) => {
+    if (e.keyCode === 13) {
+      if (title === "") {
+        alert("Enter the todo title");
+      } else {
+        firestore.collection("todos").add({
+          title,
+          completed: false,
+        });
+
+        setTitle("");
+      }
+    }
+  };
+
   return (
     <TodoInputContainer>
-      <ToggleCompleted />
-      <TextInput autoCorrect="off" placeholder="Create a new todo..." />
+      <TextInput
+        onChange={handleTitleChange}
+        onKeyDown={handleAddTodo}
+        autoCorrect="off"
+        placeholder="Create a new todo..."
+        value={title}
+      />
     </TodoInputContainer>
   );
 };

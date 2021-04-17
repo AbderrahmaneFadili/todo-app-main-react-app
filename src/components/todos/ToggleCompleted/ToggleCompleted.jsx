@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useFirestore } from "react-redux-firebase";
+
 import {
   CheckIcon,
   CircleOne,
@@ -7,19 +9,32 @@ import {
   ToggleInput,
 } from "./ToggleCompleted.styles";
 
-const ToggleCompleted = () => {
+const ToggleCompleted = ({ todoId, completed }) => {
+  const checkboxRef = useRef(null);
+
+  const firestore = useFirestore();
+
   const handleCheckBoxValueChange = (e) => {
-    console.log(e.target.checked);
+    firestore.collection("todos").doc(todoId).update({
+      completed: !completed,
+    });
   };
+
   return (
     <ToggleCompletedWrapper>
-      <ToggleInput type="checkbox" onChange={handleCheckBoxValueChange} />
+      <ToggleInput
+        checked={completed}
+        ref={checkboxRef}
+        type="checkbox"
+        onChange={handleCheckBoxValueChange}
+      />
       <CheckIcon
+        checked={completed}
         className="check"
         src={require("../../../images/icon-check.svg").default}
       />
-      <CircleOne className="circle-one" />
-      <CircleTwo className="circle-two" />
+      <CircleOne checked={completed} className="circle-one" />
+      <CircleTwo checked={completed} className="circle-two" />
     </ToggleCompletedWrapper>
   );
 };
