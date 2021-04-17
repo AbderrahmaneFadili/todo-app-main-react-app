@@ -14,7 +14,8 @@ export const FilterTodos = styled.div`
 
 export const All = styled.span`
   cursor: pointer;
-  color: var(--active-card-color);
+  color: ${({ active }) =>
+    active ? "var(--active-card-color)" : "var(--card-text-color)"};
 
   &:hover {
     color: var(--on-hover-color);
@@ -24,7 +25,8 @@ export const All = styled.span`
 export const Active = styled.span`
   margin: 0 2rem;
   cursor: pointer;
-
+  color: ${({ active }) =>
+    active ? "var(--active-card-color)" : "var(--card-text-color)"};
   &:hover {
     color: var(--on-hover-color);
   }
@@ -32,7 +34,8 @@ export const Active = styled.span`
 
 export const Completed = styled.span`
   cursor: pointer;
-
+  color: ${({ active }) =>
+    active ? "var(--active-card-color)" : "var(--card-text-color)"};
   &:hover {
     color: var(--on-hover-color);
   }
