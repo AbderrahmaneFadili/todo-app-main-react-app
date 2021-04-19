@@ -7,10 +7,13 @@ import { useFirestoreConnect } from "react-redux-firebase";
 import { useSelector } from "react-redux";
 
 const TodosList = () => {
+  const filter = useSelector((state) => state.filterReducer.filter);
+
   useFirestoreConnect(() => {
     return [
       {
         collection: "todos",
+        where: filter || null,
       },
     ];
   });

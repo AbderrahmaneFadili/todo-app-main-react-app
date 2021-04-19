@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Active, All, Completed, FilterTodos } from "./Filter.styles";
 import { connect } from "react-redux";
+import {
+  showActive,
+  showAll,
+  showCompleted,
+} from "../../../redux/actions/filterActions";
 
-const Filter = () => {
+const Filter = ({ showActive, showAll, showCompleted }) => {
   const [active, setActive] = useState({
     all: true,
     active: false,
@@ -16,6 +21,7 @@ const Filter = () => {
       active: false,
       completed: false,
     }));
+    showAll();
   };
 
   const setActiveActive = () => {
@@ -25,6 +31,7 @@ const Filter = () => {
       active: true,
       completed: false,
     }));
+    showActive();
   };
 
   const setCompletedActive = () => {
@@ -34,6 +41,7 @@ const Filter = () => {
       active: false,
       completed: true,
     }));
+    showCompleted();
   };
 
   return (
@@ -51,4 +59,8 @@ const Filter = () => {
   );
 };
 
-export default Filter;
+export default connect(null, (dispatch) => ({
+  showActive: () => dispatch(showActive()),
+  showAll: () => dispatch(showAll()),
+  showCompleted: () => dispatch(showCompleted()),
+}))(Filter);
